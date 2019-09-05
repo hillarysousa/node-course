@@ -1,5 +1,12 @@
-const fs = require('fs');
+const chalk = require('chalk');
+const getNotes = require('./notes.js');
 
-fs.writeFileSync('notes.txt', 'My name is Hillary.');
+const command = process.argv[2];
 
-fs.appendFileSync('notes.txt', ' I live in Rio de Janeiro.');
+console.log(process.argv);
+
+if (command === 'add') {
+    console.log('Adding note...');
+} else if (command === 'delete') {
+    console.log('Deleting note...');
+}
