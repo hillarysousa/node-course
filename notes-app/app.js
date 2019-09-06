@@ -17,7 +17,6 @@ yargs.command({
         },
         body: {
             describe: 'Note body',
-            demandOption: true,
             type: 'string'
         }
     },
@@ -47,7 +46,7 @@ yargs.command({
     command: 'list',
     describe: 'List notes added',
     handler() {
-        console.log('Notes added: ');
+        notes.listNotes();
     }
 });
 
